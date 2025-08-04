@@ -3,8 +3,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-a = float(input('Enter upper limit: '))
-b = float(input('Enter lower limit: '))
+a = float(input('Enter lower limit: '))
+b = float(input('Enter upper limit: '))
 n = int(input('Enter the no. of partitions: '))
 
 h = (b-a)/n
@@ -27,7 +27,7 @@ print(f'The approximate integral is {I}')
 
 plt.plot(x,[y(x) for x in x])
 x_val = np.linspace(a-10, b+10, 1000)
-plt.plot(x_val,[y(x) for x in x_val])
+plt.plot(x_val,[y(x) for x in x_val], label = func)
 y_points = [y(x) for x in x]
 for i in range(n):
     xs = [x[i], x[i], x[i+1], x[i+1]]

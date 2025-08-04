@@ -1,4 +1,4 @@
-# To calculate integration of f(x)dx [a:b] by Simpson 1/3rd method
+# To calculate integration of f(x)dx [a:b] by Simpson 3/8 method
 
 import numpy as np
 import matplotlib.pyplot as plt
