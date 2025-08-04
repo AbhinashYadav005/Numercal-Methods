@@ -36,7 +36,7 @@ else:
 
     plt.plot(x,[y(x) for x in x])
     x_val = np.linspace(a-10, b+10, 1000)
-    plt.plot(x_val,[y(x) for x in x_val])
+    plt.plot(x_val,[y(x) for x in x_val], label = func)
     y_points = [y(x) for x in x]
     for i in range(0, n, 2):
         xs = x[ i: i + 3]
