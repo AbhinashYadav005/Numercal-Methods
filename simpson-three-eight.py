@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 
 a = float(input('Enter lower limit: '))
 b = float(input('Enter upper limit: '))
-n = int(input('Enter the no. of partitions in multiple of 2: '))
+n = int(input('Enter the no. of partitions in multiple of 3: '))
 
 if( n%3 != 0):
-    print('The partitions must be multiple of 2.')
+    print('The partitions must be multiple of 3.')
 
 else:
 
@@ -36,7 +36,7 @@ else:
 
     plt.plot(x,[y(x) for x in x])
     x_val = np.linspace(a-10, b+10, 1000)
-    plt.plot(x_val,[y(x) for x in x_val])
+    plt.plot(x_val,[y(x) for x in x_val], label = func)
     y_points = [y(x) for x in x]
     for i in range(0, n, 3):
         xs = x[ i: i + 4]
