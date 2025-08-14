@@ -45,4 +45,4 @@ else:
     T = pd.DataFrame(T, columns= ['Iterations','LeastEigenvalue']+[f'x{i+1}' for i in range(n)]).to_string(index= False)
     print(T)
     print(f'Least eigenvalue is {1/maxev} in {itr} iterations')
-    print('Corresponding eigenvector is X\n',X)
+    print('Corresponding eigenvector is X\n',X)    
