@@ -1,4 +1,4 @@
-# To solve initial value problem of 1st order by RK-4 method
+# To solve initial value problem of 1st order by Euler's method
 
 import numpy as np
 import pandas as pd
@@ -20,11 +20,9 @@ xval = []
 yval = []
 
 for i in range(n):
-    k1 = h * f(x,y)
-    k2 = h * f(x+h/2, y+k1/2)
-    k3 = h * f(x+h/2, y+k2/2)
-    k4 = h * f(x+h, y+k3)
-    y = y + (1/6)*(k1 + 2*k2 + 2*k3 + k4)
+    y_predict = y + h* f(x,y)
+    y_correct = y + (h/2) * (f(x,y) + f(x+h,y_predict))
+    y = y_correct
     x = x + h
     t.append([x,y])
     xval.append(x)
